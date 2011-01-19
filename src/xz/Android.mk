@@ -97,7 +97,9 @@ LOCAL_C_INCLUDES += \
 LOCAL_CFLAGS += \
 	-DHAVE_CONFIG_H \
 	-std=c99 \
-	-Dmain=xz_main
+	-Dmain=xz_main \
+	-Dxstrdup=xz_xstrdup \
+	-Dxrealloc=xz_xrealloc
 
 LOCAL_MODULE:= libxz
 LOCAL_PRELINK_MODULE := false
