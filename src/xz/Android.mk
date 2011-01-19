@@ -43,6 +43,17 @@ LOCAL_CFLAGS += \
 LOCAL_MODULE:= xz
 LOCAL_PRELINK_MODULE := false
 LOCAL_STATIC_LIBRARIES := liblzma
+LOCAL_MODULE_PATH := $(TARGET_OUT_OPTIONAL_EXECUTABLES)
 
 include $(BUILD_EXECUTABLE)
 
+# make some symlinks
+XZ_LINKS := lzcat lzma unlzma unxz xzcat
+XZ_SYMLINKS := $(addprefix $(TARGET_OUT_OPTIONAL_EXECUTABLES)/,$(XZ_LINKS))
+$(XZ_SYMLINKS): XZ_BINARY := $(LOCAL_MODULE)
+$(XZ_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
+	@echo "Symlink: $@ -> $(XZ_BINARY)"
+	@mkdir -p $(dir $@)
+	@rm -rf $@
+	$(hide) ln -sf $(XZ_BINARY) $@
+ALL_DEFAULT_INSTALLED_MODULES += $(XZ_SYMLINKS)
