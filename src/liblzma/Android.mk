@@ -46,12 +46,15 @@ LOCAL_SRC_FILES := \
 	common/stream_flags_decoder.c \
 	common/vli_decoder.c \
 	check/check.c \
-	check/crc32_small.c \
-	check/crc64_small.c \
+	check/crc32_fast.c \
+	check/crc32_table.c \
+	check/crc64_fast.c \
+	check/crc64_table.c \
 	check/sha256.c \
 	lz/lz_encoder.c \
 	lz/lz_encoder_mf.c \
 	lz/lz_decoder.c \
+	lzma/fastpos_table.c \
 	lzma/lzma_encoder.c \
 	lzma/lzma_encoder_presets.c \
 	lzma/lzma_encoder_optimum_fast.c \

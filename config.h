@@ -160,10 +160,10 @@
 /* #undef HAVE_OPTRESET */
 
 /* Define if you have POSIX threads libraries and header files. */
-/* #undef HAVE_PTHREAD */
+#define HAVE_PTHREAD 1
 
 /* Define to 1 if optimizing for size. */
-#define HAVE_SMALL 1
+/* #undef HAVE_SMALL */
 
 /* Define to 1 if stdbool.h conforms to C99. */
 #define HAVE_STDBOOL_H 1
