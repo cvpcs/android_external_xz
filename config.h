@@ -46,7 +46,7 @@
 
 /* Define to 1 if you have the declaration of `program_invocation_name', and
    to 0 if you don't. */
-#define HAVE_DECL_PROGRAM_INVOCATION_NAME 1
+#define HAVE_DECL_PROGRAM_INVOCATION_NAME 0
 
 /* Define to 1 if arm decoder is enabled. */
 #define HAVE_DECODER_ARM 1
@@ -109,7 +109,7 @@
 #define HAVE_FCNTL_H 1
 
 /* Define to 1 if you have the `futimens' function. */
-#define HAVE_FUTIMENS 1
+/* #undef HAVE_FUTIMENS */
 
 /* Define to 1 if you have the `futimes' function. */
 /* #undef HAVE_FUTIMES */
@@ -181,7 +181,7 @@
 #define HAVE_STRING_H 1
 
 /* Define to 1 if `st_atimensec' is a member of `struct stat'. */
-/* #undef HAVE_STRUCT_STAT_ST_ATIMENSEC */
+#define HAVE_STRUCT_STAT_ST_ATIMENSEC 1
 
 /* Define to 1 if `st_atimespec.tv_nsec' is a member of `struct stat'. */
 /* #undef HAVE_STRUCT_STAT_ST_ATIMESPEC_TV_NSEC */
@@ -190,7 +190,7 @@
 /* #undef HAVE_STRUCT_STAT_ST_ATIM_ST__TIM_TV_NSEC */
 
 /* Define to 1 if `st_atim.tv_nsec' is a member of `struct stat'. */
-#define HAVE_STRUCT_STAT_ST_ATIM_TV_NSEC 1
+/* #undef HAVE_STRUCT_STAT_ST_ATIM_TV_NSEC */
 
 /* Define to 1 if `st_uatime' is a member of `struct stat'. */
 /* #undef HAVE_STRUCT_STAT_ST_UATIME */
