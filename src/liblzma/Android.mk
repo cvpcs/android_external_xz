@@ -93,7 +93,8 @@ LOCAL_CFLAGS += \
 	-DHAVE_CONFIG_H \
 	-std=c99
 
-LOCAL_MODULE:= liblzma
+LOCAL_MODULE := liblzma
+LOCAL_MODULE_TAGS := eng
 LOCAL_PRELINK_MODULE := false
 
 include $(BUILD_STATIC_LIBRARY)
